@@ -8,6 +8,6 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # if button is pressed return True
-def button():
-    return not GPIO.input(1)
+def pressed():
+    return not GPIO.input(21)
     

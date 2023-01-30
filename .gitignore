@@ -6,3 +6,4 @@ venv/
 virtualenv/
 .virtualenv/
 __pycache__
+.idea

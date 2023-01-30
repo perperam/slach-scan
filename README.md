@@ -3,8 +3,10 @@
 ## Setup of Scaner API
 Install [SANE](http://www.sane-project.org/), a scanner API backend. The manpage contains some usefull information `man scanimage`.
 ### Installation
+```
 chmod +x setup.sh
 sudo ./setup.sh
+```
 
 
 ```

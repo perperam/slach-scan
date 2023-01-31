@@ -20,7 +20,7 @@ Create the config file `config.json` with your url at `<url>`:
 Install dependencies
 ```bash
 sudo apt-get update
-sudo apt-get install curl sane
+sudo apt-get install sane
 ```
 
 Create python virtual environment and install modules
@@ -33,7 +33,13 @@ Copy Systemd service file / create service
 ```bash
 sudo cp slach-scan.service /etc/systemd/system/slach-scan.service
 sudo systemctl daemon-reload
-sudo systemctl restart slach-scan.service
+sudo systemctl enable salch-scan
+sudo systemctl restart slach-scan
+```
+
+Check service Status
+```bash
+sudo systemctl status slach-scan
 ```
 
 
@@ -46,9 +52,6 @@ sudo ./setup.sh
 
 ## Setup of Scaner API
 Install [SANE](http://www.sane-project.org/), a scanner API backend. The manpage contains some usefull information `man scanimage`.
-### Installation
-
-
 
 ### Scaners / Devices
 List available devices:
@@ -73,5 +76,4 @@ Using Curl:
 - `-T`, `--uplaod_file <file>` Uplaod a file
 - `-u`, `--user` specify a user
 
-## Autostart
-https://raspberrypi.stackexchange.com/questions/84892/run-python-script-at-startup-with-systemd-service
+Or take a closer look into the nextcloud.py file

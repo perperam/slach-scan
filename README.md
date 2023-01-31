@@ -4,11 +4,46 @@ Set up a scan button with RaspberryPi
 
 ## Installation
 Download the files
-```
+```bash
 cd /opt
-git clone https://https://github.com/perperam/slach-scan.git
+sudo git clone https://github.com/perperam/slach-scan.git
+cd /opt/slach-scan/
 ```
-Install the program
+Create the config file `config.json` with your url at `<url>`:
+```json
+{
+  "filetype" : "png",
+  "nextcloudurl" : "<url>"
+}
+```
+
+Install dependencies
+```bash
+sudo apt-get update
+sudo apt-get install curl sane
+```
+
+Create python virtual environment and install modules
+```bash
+sudo python3 -m venv venv
+sudo venv/bin/pip install -r requirements.txt
+```
+
+Add system user to run program at background
+```bash
+sudo adduser slach-scan --system --no-create-home
+```
+
+Copy Systemd service file / create service
+```bash
+sudo cp slach-scan.service /etc/systemd/system/slach-scan.service
+sudo systemctl daemon-reload
+sudo systemctl restart slach-scan.service
+```
+
+
+
+## Use `setup.sh` (not working at the moment)
 ```
 chmod +x setup.sh
 sudo ./setup.sh

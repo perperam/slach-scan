@@ -57,7 +57,6 @@ def main():
  
         logger.info("button was pressed")
 
-        filetype = "png"
 
         # get path for new scaned file
         path_file = path_scans / (str(datetime.datetime.now().strftime("scan-%Y-%m-%d-%H-%M-%S")) + "." + filetype)

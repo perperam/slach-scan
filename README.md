@@ -29,11 +29,6 @@ sudo python3 -m venv venv
 sudo venv/bin/pip install -r requirements.txt
 ```
 
-Add system user to run program at background
-```bash
-sudo adduser slach-scan --system --no-create-home
-```
-
 Copy Systemd service file / create service
 ```bash
 sudo cp slach-scan.service /etc/systemd/system/slach-scan.service

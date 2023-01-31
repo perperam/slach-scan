@@ -1,0 +1,10 @@
+[Unit]
+Description=The Slach-Scan startup service
+After=network-online.target
+
+[Service]
+ExecStart=/opt/slach-scan/venv/bin/python3 /opt/slach-scan/main.py
+User=slach-scan
+
+[Install]
+WantedBy=multi-user.target

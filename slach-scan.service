@@ -4,7 +4,8 @@ After=network-online.target
 
 [Service]
 ExecStart=/opt/slach-scan/venv/bin/python3 /opt/slach-scan/main.py
-User=slach-scan
+WorkingDirectory=/opt/slach-scan/
+User=root
 
 [Install]
 WantedBy=multi-user.target

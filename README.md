@@ -1,17 +1,25 @@
-# Setup A Scan Button with raspberry Pi
+# Slach-Scan
+Set up a scan button with RaspberryPi 
 
-## Setup of Scaner API
-Install [SANE](http://www.sane-project.org/), a scanner API backend. The manpage contains some usefull information `man scanimage`.
-### Installation
+
+## Installation
+Download the files
+```
+cd /opt
+git clone https://https://github.com/perperam/slach-scan.git
+```
+Install the program
 ```
 chmod +x setup.sh
 sudo ./setup.sh
 ```
 
+## Setup of Scaner API
+Install [SANE](http://www.sane-project.org/), a scanner API backend. The manpage contains some usefull information `man scanimage`.
+### Installation
 
-```
-sudo apt install sane
-```
+
+
 ### Scaners / Devices
 List available devices:
 ```
@@ -34,3 +42,6 @@ Using Curl:
 
 - `-T`, `--uplaod_file <file>` Uplaod a file
 - `-u`, `--user` specify a user
+
+## Autostart
+https://raspberrypi.stackexchange.com/questions/84892/run-python-script-at-startup-with-systemd-service
